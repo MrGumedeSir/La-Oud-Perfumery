@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - La'Oud Perfumery | Premium Fragrances</title>
+    <meta name="description" content="Login to your La'Oud Perfumery account to access exclusive features and manage your orders.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" aria-label="La'Oud Perfumery - Home" class="logo-link">
+                    <div class="logo-container">
+                        <img src="images/perfumesa/Logo - Copy.png" alt="La'Oud Perfumery Logo" class="brand-logo-img" />
+                        <div class="logo-icon" aria-hidden="true">
+                            <!-- Elegant Perfume Bottle Logo -->
+                            <svg viewBox="0 0 60 80" class="perfume-icon">
+                                <path d="M30 5 L25 10 L25 20 L22 25 L22 45 L25 50 L25 60 L30 65 L35 60 L35 50 L38 45 L38 25 L35 20 L35 10 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <path d="M25 10 L30 5 L35 10 L35 18 L25 18 Z" fill="currentColor"/>
+                                <rect x="28" y="2" width="4" height="4" fill="currentColor"/>
+                                <circle cx="30" cy="1" r="1" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-main">La'Oud</span>
+                            <span class="logo-subtitle">PERFUMERY</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="collections.html" class="nav-link" role="menuitem">Collections</a></li>
+                <li role="none"><a href="shop.html" class="nav-link" role="menuitem">Shop</a></li>
+                <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+                <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="nav-action active" aria-label="Login">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="cart.html" class="nav-action cart-link" aria-label="Shopping cart with 0 items">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+    <!-- Login Section -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-header">
+                    <h1 class="auth-title">Welcome Back</h1>
+                    <p class="auth-subtitle">Sign in to your La'Oud Perfumery account</p>
+                </div>
+
+                <div class="auth-tabs">
+                    <button class="tab-button active" data-tab="login">Login</button>
+                    <button class="tab-button" data-tab="register">Register</button>
+                </div>
+
+                <!-- Login Form -->
+                <div class="auth-form active" id="loginForm">
+                    <form id="loginFormElement">
+                        <div class="form-group">
+                            <label for="loginEmail">Email Address</label>
+                            <input type="email" id="loginEmail" name="email" required>
+                            <span class="error-message" id="loginEmailError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <div class="password-input">
+                                <input type="password" id="loginPassword" name="password" required>
+                                <button type="button" class="password-toggle" id="loginPasswordToggle">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <span class="error-message" id="loginPasswordError"></span>
+                        </div>
+
+                        <div class="form-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="rememberMe">
+                                <span class="checkmark"></span>
+                                Remember me
+                            </label>
+                            <a href="#" class="forgot-password">Forgot Password?</a>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary auth-btn">
+                            <span class="btn-text">Sign In</span>
+                            <div class="btn-spinner" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i>
+                            </div>
+                        </button>
+                    </form>
+
+                    <div class="auth-divider">
+                        <span>or</span>
+                    </div>
+
+                    <div class="social-login">
+                        <button class="social-btn google-btn">
+                            <i class="fab fa-google"></i>
+                            Continue with Google
+                        </button>
+                        <button class="social-btn facebook-btn">
+                            <i class="fab fa-facebook"></i>
+                            Continue with Facebook
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Register Form -->
+                <div class="auth-form" id="registerForm">
+                    <form id="registerFormElement">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                                <span class="error-message" id="firstNameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                                <span class="error-message" id="lastNameError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="registerEmail">Email Address</label>
+                            <input type="email" id="registerEmail" name="email" required>
+                            <span class="error-message" id="registerEmailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="registerPassword">Password</label>
+                            <div class="password-input">
+                                <input type="password" id="registerPassword" name="password" required>
+                                <button type="button" class="password-toggle" id="registerPasswordToggle">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <span class="error-message" id="registerPasswordError"></span>
+                            <div class="password-strength" id="passwordStrength">
+                                <div class="strength-bar">
+                                    <div class="strength-fill"></div>
+                                </div>
+                                <span class="strength-text">Password strength</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <div class="password-input">
+                                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                                <button type="button" class="password-toggle" id="confirmPasswordToggle">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <span class="error-message" id="confirmPasswordError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="agreeTerms" required>
+                                <span class="checkmark"></span>
+                                I agree to the <a href="#" class="terms-link">Terms of Service</a> and <a href="#" class="terms-link">Privacy Policy</a>
+                            </label>
+                            <span class="error-message" id="agreeTermsError"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary auth-btn">
+                            <span class="btn-text">Create Account</span>
+                            <div class="btn-spinner" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i>
+                            </div>
+                        </button>
+                    </form>
+
+                    <div class="auth-divider">
+                        <span>or</span>
+                    </div>
+
+                    <div class="social-login">
+                        <button class="social-btn google-btn">
+                            <i class="fab fa-google"></i>
+                            Continue with Google
+                        </button>
+                        <button class="social-btn facebook-btn">
+                            <i class="fab fa-facebook"></i>
+                            Continue with Facebook
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-gem"></i>
+                        <span>La'Oud Perfumery</span>
+                    </div>
+                    <p>De Nicho Perfumes - Where fragrance becomes art</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="collections.html">Collections</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 La'Oud Perfumery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enhanced Chatbot -->
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-header">
+            <div class="chatbot-avatar">
+                <i class="fas fa-gem"></i>
+            </div>
+            <div class="chatbot-info">
+                <h4>La'Oud Assistant</h4>
+                <p>Online now</p>
+            </div>
+            <button class="chatbot-close" id="chatbotClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="chatbot-messages" id="chatbotMessages" role="log" aria-live="polite">
+        </div>
+        
+        <div class="chatbot-input">
+            <input type="text" id="chatbotInput" placeholder="Ask about account, login, or registration...">
+            <button id="chatbotSend">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+        
+        <div class="chatbot-quick-actions">
+            <button class="quick-action" data-message="I forgot my password">Forgot Password</button>
+            <button class="quick-action" data-message="How do I create an account?">Create Account</button>
+            <button class="quick-action" data-message="What are the benefits of having an account?">Account Benefits</button>
+            <button class="quick-action" data-message="I'm having trouble logging in">Login Help</button>
+        </div>
+    </div>
+    
+    <!-- Chatbot Toggle Button -->
+    <button class="chatbot-toggle" id="chatbotToggle">
+        <i class="fas fa-comments"></i>
+        <span class="chatbot-badge">1</span>
+    </button>
+
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

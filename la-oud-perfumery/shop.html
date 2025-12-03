@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - La'Oud Perfumery | Premium Fragrances</title>
+    <meta name="description" content="Shop premium oud fragrances and niche perfumes at La'Oud Perfumery. Discover our exclusive collection of luxury scents.">
+    <meta name="keywords" content="oud perfume, niche fragrances, premium perfumes, luxury scents, online shop">
+    <meta name="author" content="La'Oud Perfumery">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <p>Courier available throughout South Africa</p>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" aria-label="La'Oud Perfumery - Home" class="logo-link">
+                    <div class="logo-container">
+                        <img src="images/perfumesa/Logo - Copy.png" alt="La'Oud Perfumery Logo" class="brand-logo-img" />
+                        <div class="logo-icon" aria-hidden="true">
+                            <!-- Elegant Perfume Bottle Logo -->
+                            <svg viewBox="0 0 60 80" class="perfume-icon">
+                                <path d="M30 5 L25 10 L25 20 L22 25 L22 45 L25 50 L25 60 L30 65 L35 60 L35 50 L38 45 L38 25 L35 20 L35 10 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <path d="M25 10 L30 5 L35 10 L35 18 L25 18 Z" fill="currentColor"/>
+                                <rect x="28" y="2" width="4" height="4" fill="currentColor"/>
+                                <circle cx="30" cy="1" r="1" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-main">La'Oud</span>
+                            <span class="logo-subtitle">PERFUMERY</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="collections.html" class="nav-link" role="menuitem">Collections</a></li>
+                <li role="none"><a href="shop.html" class="nav-link active" role="menuitem" aria-current="page">Shop</a></li>
+                <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+                <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="nav-action" aria-label="Login">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="cart.html" class="nav-action cart-link" aria-label="Shopping cart with 0 items">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Shop Header -->
+        <section class="shop-header" aria-labelledby="shop-title">
+            <div class="container">
+                <div class="shop-header-content">
+                    <h1 id="shop-title" class="shop-title">Premium Fragrance Collection</h1>
+                    <p class="shop-subtitle">Discover our carefully curated selection of exquisite oud and niche perfumes, each crafted to tell a unique story of luxury and sophistication</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop Filters -->
+        <section class="shop-filters" aria-labelledby="filters-title">
+            <div class="container">
+                <h2 id="filters-title" class="sr-only">Filter Products</h2>
+                <div class="filter-container" role="group" aria-labelledby="filters-title">
+                    <div class="filter-group">
+                        <label for="categoryFilter">Category:</label>
+                        <select id="categoryFilter" class="filter-select" aria-label="Filter by category">
+                            <option value="all">All Fragrances</option>
+                            <option value="oud">Oud Collection</option>
+                            <option value="floral">Floral Essence</option>
+                            <option value="oriental">Oriental Mystique</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="priceFilter">Price Range:</label>
+                        <select id="priceFilter" class="filter-select" aria-label="Filter by price range">
+                            <option value="all">All Prices</option>
+                            <option value="0-500">R0 - R500</option>
+                            <option value="500-1000">R500 - R1000</option>
+                            <option value="1000-2000">R1000 - R2000</option>
+                            <option value="2000+">R2000+</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="sortBy">Sort By:</label>
+                        <select id="sortBy" class="filter-select" aria-label="Sort products">
+                            <option value="name">Name A-Z</option>
+                            <option value="price-low">Price Low-High</option>
+                            <option value="price-high">Price High-Low</option>
+                            <option value="newest">Newest First</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Grid -->
+        <section class="products-section" aria-labelledby="products-title">
+            <div class="container">
+                <h2 id="products-title" class="sr-only">Product Listings</h2>
+                <div class="products-grid" id="productsGrid" role="list" aria-label="Product listings">
+                    <!-- Products will be loaded dynamically -->
+                </div>
+                <div class="loading-spinner" id="loadingSpinner" role="status" aria-live="polite" aria-label="Loading products">
+                    <div class="spinner" aria-hidden="true"></div>
+                    <p>Loading fragrances...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Modal -->
+        <div class="product-modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+            <div class="modal-content">
+                <button class="modal-close" id="modalClose" aria-label="Close product details dialog">&times;</button>
+                <div class="modal-body" id="modalBody">
+                    <!-- Product details will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                            <div class="footer-logo">
+                                <img src="images/logo/Logo.pmg" alt="La'Oud Perfumery Logo" class="footer-logo-img" onerror="if(this.src.endsWith('.pmg')){this.src='images/logo/Logo.png';}else if(this.src.endsWith('.png')){this.src='images/logo/Logo.jpg';}" />
+                                <!-- La'Oud Perfumery Logo -->
+                                <svg viewBox="0 0 200 80" class="footer-perfume-icon" aria-hidden="true">
+                                    <!-- Perfume Bottle -->
+                                    <path d="M100 5 L95 8 L95 15 L90 18 L90 25 L95 28 L95 35 L100 38 L105 35 L105 28 L110 25 L110 18 L105 15 L105 8 Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                    <!-- Bottle Cap -->
+                                    <path d="M95 8 L100 5 L105 8 L105 12 L95 12 Z" fill="currentColor"/>
+                                    <!-- Sprayer -->
+                                    <rect x="98" y="2" width="4" height="3" fill="currentColor"/>
+                                    <circle cx="100" cy="1.5" r="0.5" fill="#000"/>
+                                    <!-- Decorative Frame -->
+                                    <path d="M20 45 Q20 40 25 40 L175 40 Q180 40 180 45 L180 55 Q180 60 175 60 L25 60 Q20 60 20 55 Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                    <!-- Ornate Flourishes -->
+                                    <path d="M15 50 Q10 45 15 40 Q20 35 25 40" fill="none" stroke="currentColor" stroke-width="1"/>
+                                    <path d="M185 50 Q190 45 185 40 Q180 35 175 40" fill="none" stroke="currentColor" stroke-width="1"/>
+                                    <path d="M15 50 Q10 55 15 60 Q20 65 25 60" fill="none" stroke="currentColor" stroke-width="1"/>
+                                    <path d="M185 50 Q190 55 185 60 Q180 65 175 60" fill="none" stroke="currentColor" stroke-width="1"/>
+                                </svg>
+                                <span>La'Oud Perfumery</span>
+                            </div>
+                    <p>Premium Niche Perfumes - Where fragrance becomes art</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="collections.html">Collections</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 La'Oud Perfumery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enhanced Chatbot -->
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-header">
+            <div class="chatbot-avatar" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="chatbot-perfume-icon">
+                    <path d="M12 2C8.5 2 6 4.5 6 8c0 2.5 1.5 4.5 3.5 5.5v8c0 1.1.9 2 2 2s2-.9 2-2v-8c2-1 3.5-3 3.5-5.5C18 4.5 15.5 2 12 2z"/>
+                    <circle cx="12" cy="8" r="1.5"/>
+                </svg>
+            </div>
+            <div class="chatbot-info">
+                <h4>La'Oud Assistant</h4>
+                <p>Online now</p>
+            </div>
+            <button class="chatbot-close" id="chatbotClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="message bot-message">
+                <div class="message-avatar" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" class="message-perfume-icon">
+                        <path d="M12 2C8.5 2 6 4.5 6 8c0 2.5 1.5 4.5 3.5 5.5v8c0 1.1.9 2 2 2s2-.9 2-2v-8c2-1 3.5-3 3.5-5.5C18 4.5 15.5 2 12 2z"/>
+                        <circle cx="12" cy="8" r="1.5"/>
+                    </svg>
+                </div>
+                <div class="message-content">
+                    <p>Welcome to our shop! I can help you find the perfect fragrance. What type of scent are you looking for?</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chatbot-input">
+            <input type="text" id="chatbotInput" placeholder="Ask about fragrances, sizes, or recommendations...">
+            <button id="chatbotSend">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+        
+        <div class="chatbot-quick-actions">
+            <button class="quick-action" data-message="What are your best-selling fragrances?">Best Sellers</button>
+            <button class="quick-action" data-message="What sizes do you have available?">Sizes</button>
+            <button class="quick-action" data-message="Do you have any oud fragrances?">Oud Collection</button>
+            <button class="quick-action" data-message="How do I place an order?">Order Help</button>
+        </div>
+    </div>
+    
+    <!-- Chatbot Toggle Button -->
+    <button class="chatbot-toggle" id="chatbotToggle">
+        <i class="fas fa-comments"></i>
+        <span class="chatbot-badge">1</span>
+    </button>
+
+    <script src="js/app.js"></script>
+    <script src="js/shop.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>
